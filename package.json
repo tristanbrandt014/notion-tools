@@ -1,19 +1,20 @@
 {
-  "name": "notion",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@biomejs/biome": "^1.7.3",
-    "bun-types": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@notionhq/client": "^2.2.15",
-    "p-throttle": "^6.1.0"
-  },
-  "scripts": {
-    "start": "bun index.ts"
-  }
+	"name": "notion",
+	"module": "index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "^1.7.3",
+		"bun-types": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@notionhq/client": "^2.2.15",
+		"p-throttle": "^6.1.0"
+	},
+	"scripts": {
+		"start": "bun index.ts",
+		"serve": "bun install && pm2 stop notion-tools && pm2 delete notion-tools && pm2 start --interpreter ~/.bun/bin/bun index.ts --name notion-tools"
+	}
 }
