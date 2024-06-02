@@ -40,7 +40,7 @@ export const updateAssignmentTitle = async (page: PageObjectResponse) => {
 		return;
 	}
 
-	const title = `${moduleCode} | AS${assignmentNumber}`;
+	const title = `AS${assignmentNumber} | ${moduleCode}`;
 
 	console.log(`Updating ${page.id} title to ${title}`);
 
