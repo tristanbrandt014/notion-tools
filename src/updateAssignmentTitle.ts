@@ -58,6 +58,7 @@ export const updateAssignmentTitle = async (page: PageObjectResponse) => {
 					],
 				},
 			},
+			icon: { type: "emoji", emoji: "🎯" },
 		}),
 	)();
 };
